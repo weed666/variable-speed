@@ -1,0 +1,46 @@
+{
+  "source_checkpoint": "rl_train/results/Human_Phase_2/trained_models/model_52445184.zip",
+  "output_checkpoint": "rl_train/train/checkpoint/human_phase2_to_exo_phase1/exo_p1_init.zip",
+  "target_config": "rl_train/train/train_configs/stage3_exo_teacher_positive_power.json",
+  "copied_actor_keys": [
+    [
+      "policy_network.policy_net.0.weight",
+      "policy_network.human_policy_net.0.weight"
+    ],
+    [
+      "policy_network.policy_net.0.bias",
+      "policy_network.human_policy_net.0.bias"
+    ],
+    [
+      "policy_network.policy_net.2.weight",
+      "policy_network.human_policy_net.2.weight"
+    ],
+    [
+      "policy_network.policy_net.2.bias",
+      "policy_network.human_policy_net.2.bias"
+    ],
+    [
+      "policy_network.policy_net.4.weight",
+      "policy_network.human_policy_net.4.weight"
+    ],
+    [
+      "policy_network.policy_net.4.bias",
+      "policy_network.human_policy_net.4.bias"
+    ]
+  ],
+  "copied_log_std_slice": "log_std[0:22]",
+  "new_log_std_slice": "log_std[22:24]",
+  "not_copied": [
+    "source policy_network.value_net.*",
+    "source optimizer state",
+    "source rollout buffer",
+    "source scheduler state",
+    "target policy_network.exo_policy_net.*",
+    "target policy_network.value_net.*"
+  ],
+  "human_actor_consistency_max_abs_difference": 0.0,
+  "human_log_std_consistency_max_abs_difference": 0.0,
+  "target_log_std_shape": [
+    24
+  ]
+}

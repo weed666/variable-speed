@@ -1,0 +1,433 @@
+{
+    "total_timesteps": 100000000.0,
+    "evaluate_param_list": [
+        {
+            "num_timesteps": 600,
+            "initial_velocity": 0.9,
+            "goal_velocity": 0.9,
+            "target_acceleration": 0.0,
+            "ramp_start_time": 5.0,
+            "episode_duration": 20.0,
+            "reference_index": 0,
+            "seed": 1234,
+            "cam_type": "follow",
+            "cam_distance": 2.5,
+            "visualize_activation": false,
+            "skip_replay": false,
+            "realtime_plotting_info": [
+                {
+                    "plot_duration_type": "total",
+                    "filter": {
+                        "type": "butter",
+                        "order": 2,
+                        "cutoff": 2.0,
+                        "fs": 30.0
+                    },
+                    "category": "joint_data",
+                    "name": "pelvis_tx",
+                    "property_type": "qvel",
+                    "y_lim": [
+                        0.6,
+                        1.9
+                    ]
+                },
+                {
+                    "plot_duration_type": "gait_cycle_timestep",
+                    "category": "joint_data",
+                    "name": "hip_flexion_r",
+                    "property_type": "qpos",
+                    "y_scale": 57.2958,
+                    "y_lim": [
+                        -30,
+                        45
+                    ]
+                },
+                {
+                    "plot_duration_type": "gait_cycle_timestep",
+                    "category": "joint_data",
+                    "name": "knee_angle_r",
+                    "property_type": "qpos",
+                    "y_scale": 57.2958,
+                    "y_lim": [
+                        -90,
+                        5
+                    ]
+                },
+                {
+                    "plot_duration_type": "gait_cycle_timestep",
+                    "category": "joint_data",
+                    "name": "ankle_angle_r",
+                    "property_type": "qpos",
+                    "y_scale": 57.2958,
+                    "y_lim": [
+                        -30,
+                        25
+                    ]
+                }
+            ]
+        },
+        {
+            "num_timesteps": 600,
+            "initial_velocity": 1.6,
+            "goal_velocity": 1.6,
+            "target_acceleration": 0.0,
+            "ramp_start_time": 5.0,
+            "episode_duration": 20.0,
+            "reference_index": 0,
+            "seed": 1234,
+            "cam_type": "follow",
+            "cam_distance": 2.5,
+            "visualize_activation": false,
+            "skip_replay": false,
+            "realtime_plotting_info": [
+                {
+                    "plot_duration_type": "total",
+                    "filter": {
+                        "type": "butter",
+                        "order": 2,
+                        "cutoff": 2.0,
+                        "fs": 30.0
+                    },
+                    "category": "joint_data",
+                    "name": "pelvis_tx",
+                    "property_type": "qvel",
+                    "y_lim": [
+                        0.6,
+                        1.9
+                    ]
+                },
+                {
+                    "plot_duration_type": "gait_cycle_timestep",
+                    "category": "joint_data",
+                    "name": "hip_flexion_r",
+                    "property_type": "qpos",
+                    "y_scale": 57.2958,
+                    "y_lim": [
+                        -30,
+                        45
+                    ]
+                },
+                {
+                    "plot_duration_type": "gait_cycle_timestep",
+                    "category": "joint_data",
+                    "name": "knee_angle_r",
+                    "property_type": "qpos",
+                    "y_scale": 57.2958,
+                    "y_lim": [
+                        -90,
+                        5
+                    ]
+                },
+                {
+                    "plot_duration_type": "gait_cycle_timestep",
+                    "category": "joint_data",
+                    "name": "ankle_angle_r",
+                    "property_type": "qpos",
+                    "y_scale": 57.2958,
+                    "y_lim": [
+                        -30,
+                        25
+                    ]
+                }
+            ]
+        }
+    ],
+    "logger_params": {
+        "logging_frequency": 8,
+        "evaluate_frequency": 64
+    },
+    "env_params": {
+        "env_id": "myoAssistLegAccelerationExo-v0",
+        "num_envs": 32,
+        "seed": 1234,
+        "safe_height": 0.7,
+        "out_of_trajectory_threshold": 100,
+        "flag_random_ref_index": true,
+        "control_framerate": 30,
+        "physics_sim_framerate": 1200,
+        "velocity_mode": "CONSTANT_ACCELERATION",
+        "uniform_sampling_strategy": "cycle",
+        "min_target_velocity": 0.9,
+        "max_target_velocity": 1.6,
+        "min_target_velocity_period": 2,
+        "max_target_velocity_period": 10,
+        "enable_lumbar_joint": false,
+        "lumbar_joint_fixed_angle": -0.13,
+        "lumbar_joint_damping_value": 0.05,
+        "observation_joint_pos_keys": [
+            "ankle_angle_l",
+            "ankle_angle_r",
+            "hip_flexion_l",
+            "hip_flexion_r",
+            "knee_angle_l",
+            "knee_angle_r",
+            "pelvis_tilt",
+            "pelvis_ty"
+        ],
+        "observation_joint_vel_keys": [
+            "ankle_angle_l",
+            "ankle_angle_r",
+            "hip_flexion_l",
+            "hip_flexion_r",
+            "knee_angle_l",
+            "knee_angle_r",
+            "pelvis_tilt",
+            "pelvis_tx",
+            "pelvis_ty"
+        ],
+        "observation_sensor_keys": [
+            "r_foot",
+            "l_foot",
+            "r_toes",
+            "l_toes"
+        ],
+        "joint_limit_sensor_keys": [
+            "r_knee_sensor",
+            "l_knee_sensor",
+            "r_hip_sensor",
+            "l_hip_sensor",
+            "r_ankle_sensor",
+            "l_ankle_sensor",
+            "r_mtp_sensor",
+            "l_mtp_sensor"
+        ],
+        "terrain_type": "flat",
+        "terrain_params": "",
+        "reward_keys_and_weights": {
+            "qpos_imitation_rewards": {
+                "pelvis_ty": 0.0,
+                "pelvis_tilt": 0.0,
+                "hip_flexion_l": 0.0,
+                "hip_flexion_r": 0.0,
+                "knee_angle_l": 0.0,
+                "knee_angle_r": 0.0,
+                "ankle_angle_l": 0.0,
+                "ankle_angle_r": 0.0
+            },
+            "qvel_imitation_rewards": {
+                "pelvis_ty": 0.0,
+                "pelvis_tilt": 0.0,
+                "hip_flexion_l": 0.0,
+                "hip_flexion_r": 0.0,
+                "knee_angle_l": 0.0,
+                "knee_angle_r": 0.0,
+                "ankle_angle_l": 0.0,
+                "ankle_angle_r": 0.0
+            },
+            "end_effector_imitation_reward": 0.0,
+            "forward_reward": 0,
+            "average_velocity_per_step": 0,
+            "muscle_activation_penalty": 0.15,
+            "muscle_activation_diff_penalty": 0.05,
+            "muscle_activation_penalty_per_step": 0.0,
+            "footstep_delta_time": 0.0,
+            "joint_constraint_force_penalty": 0.5,
+            "foot_force_penalty": 0.3,
+            "fall_stability_reward": 0
+        },
+        "custom_max_episode_steps": 600,
+        "episode_duration_s": 20.0,
+        "ramp_start_time_min": 8.0,
+        "ramp_start_time_max": 10.0,
+        "speed_levels": [
+            0.9,
+            1.0,
+            1.1,
+            1.2,
+            1.3,
+            1.4,
+            1.5,
+            1.6
+        ],
+        "acceleration_magnitudes": [
+            0.1,
+            0.2,
+            0.3,
+            0.4,
+            0.5
+        ],
+        "min_ramp_duration": 1.0,
+        "max_ramp_duration": 5.0,
+        "task_sampling_strategy": "shuffled_cycle",
+        "acceleration_window_duration": 0.3,
+        "min_step_acceleration_interval": 0.1,
+        "steady_forward_weight": 3.0,
+        "steady_average_velocity_weight": 3.0,
+        "local_acceleration_weight": 3,
+        "step_acceleration_weight": 3,
+        "local_acceleration_error_scale": 8.0,
+        "step_acceleration_error_scale": 8.0,
+        "muscle_activation_weight": 0.15,
+        "hip_muscle_activation_reward_weight": 2.5,
+        "exo_power_reward_weight": 0.0,
+        "exo_power_reward_alpha": 0.5,
+        "exo_power_reward_mode": "positive",
+        "model_path": "models/22muscle_2D/myoLeg22_2D_BASELINE_HIP_EXO.xml",
+        "reference_data_path": "rl_train/reference_data/short_reference_gait.npz",
+        "reference_data_keys": [
+            "ankle_angle_l",
+            "ankle_angle_r",
+            "hip_flexion_l",
+            "hip_flexion_r",
+            "knee_angle_l",
+            "knee_angle_r",
+            "pelvis_tilt",
+            "pelvis_tx",
+            "pelvis_ty"
+        ],
+        "prev_trained_policy_path": "rl_train/train/checkpoint/exo_phase1_to_phase2/exo_p2_steady_init.zip",
+        "speed_min": 0.9,
+        "speed_max": 1.6,
+        "delta_velocity_levels": [
+            0.1,
+            0.2,
+            0.3,
+            0.4,
+            0.5,
+            0.6,
+            0.7
+        ],
+        "pre_hold_min_s": 1.0,
+        "pre_hold_max_s": 2.0,
+        "post_hold_min_s": 1.0,
+        "post_hold_max_s": 2.0,
+        "steady_speed_sampling": "uniform",
+        "steady_episode_duration_min_s": 4.0,
+        "steady_episode_duration_max_s": 6.0,
+        "dynamic_episode_duration": true,
+        "exo_torque_limit_nm": 12.0,
+        "torque_limit_reference_nm": 25.0,
+        "exo_output_lpf_enabled": false,
+        "exo_output_lpf_tau_s": 0.1,
+        "training_stage": "stage5_coadapt",
+        "teacher_regime": "steady",
+        "task_pool_mode": "speed_level_pairs",
+        "stage5_observation_extension": true,
+        "stage5_smat_power_magnitude_saturation_reward_weight": 2,
+        "stage5_smat_torque_rate_penalty_weight": 0.5,
+        "stage5_smat_power_alpha": 0.25,
+        "stage5_smat_magnitude_beta": 0.2,
+        "stage5_smat_saturation_lambda": 2.0,
+        "stage5_smat_saturation_delta": 0.8,
+        "stage5_smat_omega_scale_rad_s": 2.0
+    },
+    "ppo_params": {
+        "learning_rate": 3e-05,
+        "n_steps": 2048,
+        "batch_size": 16384,
+        "n_epochs": 20,
+        "gamma": 0.99,
+        "gae_lambda": 0.95,
+        "clip_range": 0.15,
+        "clip_range_vf": 100,
+        "ent_coef": 0.003,
+        "vf_coef": 0.5,
+        "max_grad_norm": 0.5,
+        "use_sde": false,
+        "sde_sample_freq": -1,
+        "target_kl": 0.01,
+        "device": "cuda"
+    },
+    "policy_params": {
+        "custom_policy_params": {
+            "reset_shared_net_after_load": false,
+            "reset_policy_net_after_load": false,
+            "reset_value_net_after_load": false,
+            "freeze_human_actor": false,
+            "freeze_human_log_std": false,
+            "human_log_std_freeze_end": 22,
+            "net_arch": {
+                "human_actor": [
+                    64,
+                    64
+                ],
+                "exo_actor": [
+                    64,
+                    64
+                ],
+                "common_critic": [
+                    64,
+                    64
+                ]
+            },
+            "net_indexing_info": {
+                "human_actor": {
+                    "observation": [
+                        {
+                            "type": "range",
+                            "range": [
+                                0,
+                                46
+                            ],
+	                            "comment": "Stage5 46-dim human observation"
+                        },
+                        {
+                            "type": "index",
+	                            "index": [
+	                                52,
+	                                53
+	                            ],
+	                            "comment": "Stage5 applied Exo_R and Exo_L normalized commands"
+	                        }
+                    ],
+                    "action": [
+                        {
+                            "type": "range_mapping",
+                            "range_net": [
+                                0,
+                                22
+                            ],
+                            "range_action": [
+                                0,
+                                22
+                            ],
+                            "comment": "22 Stage3 human muscle actions"
+                        }
+                    ]
+                },
+                "exo_actor": {
+                    "observation": [
+                        {
+                            "type": "range",
+                            "range": [
+                                0,
+                                52
+                            ],
+	                            "comment": "Stage5 52-dim Exo observation including 3-step history"
+	                        }
+                    ],
+                    "action": [
+                        {
+                            "type": "range_mapping",
+                            "range_net": [
+                                0,
+                                2
+                            ],
+                            "range_action": [
+                                22,
+                                24
+                            ],
+                            "comment": "Exo_R and Exo_L normalized actions"
+                        }
+                    ]
+                },
+                "common_critic": {
+                    "observation": [
+                        {
+                            "type": "range",
+	                            "range": [
+	                                0,
+	                                54
+	                            ],
+	                            "comment": "Stage5 full 54-dim observation"
+	                        }
+                    ]
+                }
+            },
+            "log_std_init": 0.0
+        }
+    },
+    "auto_reward_adjust_params": {
+        "learning_rate": 0.0
+    }
+}

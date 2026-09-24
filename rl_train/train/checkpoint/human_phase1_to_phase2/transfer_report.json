@@ -1,0 +1,30 @@
+{
+  "source_checkpoint": "rl_train/results/Human_Phase_1/trained_models/model_29900800.zip",
+  "output_checkpoint": "rl_train/train/checkpoint/human_phase1_to_phase2/human_p2_init.zip",
+  "target_config": "rl_train/train/train_configs/human_phase_2.json",
+  "old_first_layer_shape": [
+    64,
+    44
+  ],
+  "new_first_layer_shape": [
+    64,
+    46
+  ],
+  "new_columns_zero": true,
+  "copied_keys": [
+    "policy_network.policy_net.0.weight",
+    "policy_network.policy_net.0.bias",
+    "policy_network.policy_net.2.weight",
+    "policy_network.policy_net.2.bias",
+    "policy_network.policy_net.4.weight",
+    "policy_network.policy_net.4.bias",
+    "log_std"
+  ],
+  "not_copied": [
+    "policy_network.value_net.*",
+    "policy.optimizer",
+    "rollout_buffer",
+    "learning_rate_scheduler_state"
+  ],
+  "actor_consistency_max_abs_difference": 0.0
+}

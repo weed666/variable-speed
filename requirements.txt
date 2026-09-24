@@ -1,0 +1,22 @@
+# Core simulation, RL, and TCN training dependencies (Python 3.11)
+numpy==2.2.6
+scipy==1.17.1
+mujoco==3.3.3
+gymnasium==0.29.1
+dm-control==1.0.31
+h5py==3.12.1
+torch>=2.0
+stable-baselines3==2.9.0
+packaging
+termcolor
+flatten-dict
+GitPython
+click
+Pillow
+pink-noise-rl
+absl-py
+
+# Optional plotting/analysis, hardware, and test dependencies are exposed as
+# setuptools extras: MyOSys[analysis], MyOSys[hardware], and MyOSys[dev].
+# Install a CPU or CUDA-enabled PyTorch build using the official PyTorch
+# instructions when platform-specific wheels are required.

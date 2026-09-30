@@ -1,7 +1,6 @@
 # Learning a Speed-adaptive Hip Exoskeleton Control Policy Via Sim-to-real Reinforcement Learning
 
-**Paper:** Coming soon.  
-**arXiv:** Coming soon.  
+**arXiv:** https://arxiv.org/abs/2609.28027
 
 ## Overview
 

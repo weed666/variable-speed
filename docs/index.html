@@ -1,0 +1,604 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+  <!-- Primary Meta Tags -->
+  <!-- TODO: Replace with your paper title and author names -->
+  <meta name="title" content="PAPER_TITLE - AUTHOR_NAMES">
+  <!-- TODO: Write a compelling 150-160 character description of your research -->
+  <meta name="description" content="BRIEF_DESCRIPTION_OF_YOUR_RESEARCH_CONTRIBUTION_AND_FINDINGS">
+  <!-- TODO: Add 5-10 relevant keywords for your research area -->
+  <meta name="keywords" content="KEYWORD1, KEYWORD2, KEYWORD3, machine learning, computer vision, AI">
+  <!-- TODO: List all authors -->
+  <meta name="author" content="FIRST_AUTHOR_NAME, SECOND_AUTHOR_NAME">
+  <meta name="robots" content="index, follow">
+  <meta name="language" content="English">
+  
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="article">
+  <!-- TODO: Replace with your institution or lab name -->
+  <meta property="og:site_name" content="INSTITUTION_OR_LAB_NAME">
+  <!-- TODO: Same as paper title above -->
+  <meta property="og:title" content="PAPER_TITLE">
+  <!-- TODO: Same as description above -->
+  <meta property="og:description" content="BRIEF_DESCRIPTION_OF_YOUR_RESEARCH_CONTRIBUTION_AND_FINDINGS">
+  <!-- TODO: Replace with your actual website URL -->
+  <meta property="og:url" content="https://arxiv.org/pdf/2609.28027.pdf">
+  <!-- TODO: Create a 1200x630px preview image and update path -->
+  <meta property="og:image" content="https://YOUR_DOMAIN.com/static/images/social_preview.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="PAPER_TITLE - Research Preview">
+  <meta property="article:published_time" content="2024-01-01T00:00:00.000Z">
+  <meta property="article:author" content="FIRST_AUTHOR_NAME">
+  <meta property="article:section" content="Research">
+  <meta property="article:tag" content="KEYWORD1">
+  <meta property="article:tag" content="KEYWORD2">
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image">
+  <!-- TODO: Replace with your lab/institution Twitter handle -->
+  <meta name="twitter:site" content="@YOUR_TWITTER_HANDLE">
+  <!-- TODO: Replace with first author's Twitter handle -->
+  <meta name="twitter:creator" content="@AUTHOR_TWITTER_HANDLE">
+  <!-- TODO: Same as paper title above -->
+  <meta name="twitter:title" content="PAPER_TITLE">
+  <!-- TODO: Same as description above -->
+  <meta name="twitter:description" content="BRIEF_DESCRIPTION_OF_YOUR_RESEARCH_CONTRIBUTION_AND_FINDINGS">
+  <!-- TODO: Same as social preview image above -->
+  <meta name="twitter:image" content="https://YOUR_DOMAIN.com/static/images/social_preview.png">
+  <meta name="twitter:image:alt" content="PAPER_TITLE - Research Preview">
+
+  <!-- Academic/Research Specific -->
+  <meta name="citation_title" content="PAPER_TITLE">
+  <meta name="citation_author" content="FIRST_AUTHOR_LAST, FIRST_AUTHOR_FIRST">
+  <meta name="citation_author" content="SECOND_AUTHOR_LAST, SECOND_AUTHOR_FIRST">
+  <meta name="citation_publication_date" content="2024">
+  <meta name="citation_conference_title" content="CONFERENCE_NAME">
+  <meta name="citation_pdf_url" content="https://YOUR_DOMAIN.com/static/pdfs/paper.pdf">
+  
+  <!-- Additional SEO -->
+  <meta name="theme-color" content="#2563eb">
+  <meta name="msapplication-TileColor" content="#2563eb">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="default">
+  
+  <!-- Preconnect for performance -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://ajax.googleapis.com">
+  <link rel="preconnect" href="https://documentcloud.adobe.com">
+  <link rel="preconnect" href="https://cdn.jsdelivr.net">
+
+
+  <!-- TODO: Replace with your paper title and authors -->
+  <title>Learning a Speed-adaptive Hip Exoskeleton Control Policy Via Reinforcement Learning</title>
+  
+  <!-- Favicon and App Icons -->
+  <link rel="icon" type="image/x-icon" href="static/images/favicon.ico">
+  <link rel="apple-touch-icon" href="static/images/favicon.ico">
+  
+  <!-- Critical CSS - Load synchronously -->
+  <link rel="stylesheet" href="static/css/bulma.min.css">
+  <link rel="stylesheet" href="static/css/index.css">
+
+  <!-- Project-page layout refinements -->
+  <style>
+    .research-section {
+      padding: 2.15rem 1.5rem;
+    }
+    .research-section .title.is-3 {
+      text-align: center;
+      margin-bottom: 1.25rem;
+    }
+    .figure-block,
+    .video-block {
+      margin: 0 auto 1.45rem;
+      text-align: center;
+    }
+    .figure-block img,
+    .video-block video {
+      display: block;
+      width: 100%;
+      height: auto;
+      margin: 0 auto;
+    }
+    .figure-wide {
+      max-width: 1024px;
+    }
+    .figure-medium {
+      max-width: 820px;
+    }
+    .figure-compact {
+      max-width: 560px;
+    }
+    /* Validation videos: 720 px max width (~75% of the previous 960 px).
+       Change this value later if you want them larger or smaller. */
+    .video-block {
+      max-width: 500px;
+    }
+    .figure-caption {
+      max-width: 940px;
+      margin: 0.55rem auto 0;
+      text-align: center;
+      line-height: 1.45;
+      font-size: 1rem;
+    }
+    .research-copy {
+      max-width: 900px;
+      margin: 1.05rem auto 0;
+      line-height: 1.65;
+      text-align: justify;
+    }
+    .validation-carousel {
+      max-width: 1080px;
+      margin: 0.65rem auto 1.15rem;
+    }
+    .validation-carousel .item {
+      text-align: center;
+      padding: 0.15rem 0.45rem 0.3rem;
+    }
+    .validation-carousel .item img {
+      display: block;
+      max-width: 100%;
+      max-height: 520px;
+      width: auto;
+      height: auto;
+      margin: 0 auto;
+      object-fit: contain;
+    }
+    /* Compact portrait/square result figures (activation_sim and free_walk).
+       40% keeps them visually closer to the wide plots without dominating the page. */
+    .validation-carousel .item img.compact-result {
+      max-width: 25%;
+      max-height: 420px;
+    }
+    .validation-carousel .figure-caption {
+      margin-top: 0.45rem;
+      margin-bottom: 0;
+    }
+    @media screen and (max-width: 768px) {
+      .research-section {
+        padding: 1.7rem 1rem;
+      }
+      .figure-medium,
+      .figure-compact {
+        max-width: 100%;
+      }
+      .figure-block,
+      .video-block {
+        margin-bottom: 1.15rem;
+      }
+      .video-block {
+        max-width: 100%;
+      }
+      .validation-carousel .item img.compact-result {
+        max-width: 72%;
+        max-height: 380px;
+      }
+    }
+  </style>
+  
+  <!-- Non-critical CSS - Load asynchronously -->
+  <link rel="preload" href="static/css/bulma-carousel.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <link rel="preload" href="static/css/bulma-slider.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <link rel="preload" href="static/css/fontawesome.all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <link rel="preload" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  
+  <!-- Fallback for browsers that don't support preload -->
+  <noscript>
+    <link rel="stylesheet" href="static/css/bulma-carousel.min.css">
+    <link rel="stylesheet" href="static/css/bulma-slider.min.css">
+    <link rel="stylesheet" href="static/css/fontawesome.all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  </noscript>
+  
+  <!-- Fonts - Optimized loading -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  
+  <!-- Defer non-critical JavaScript -->
+  <script defer src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="https://documentcloud.adobe.com/view-sdk/main.js"></script>
+  <script defer src="static/js/fontawesome.all.min.js"></script>
+  <script defer src="static/js/bulma-carousel.min.js"></script>
+  <script defer src="static/js/bulma-slider.min.js"></script>
+  <script defer src="static/js/index.js?v=20260926-video-fix"></script>
+  
+  <!-- Structured Data for Academic Papers -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ScholarlyArticle",
+    "headline": "PAPER_TITLE",
+    "description": "BRIEF_DESCRIPTION_OF_YOUR_RESEARCH_CONTRIBUTION_AND_FINDINGS",
+    "author": [
+      {
+        "@type": "Person",
+        "name": "FIRST_AUTHOR_NAME",
+        "affiliation": {
+          "@type": "Organization",
+          "name": "INSTITUTION_NAME"
+        }
+      },
+      {
+        "@type": "Person",
+        "name": "SECOND_AUTHOR_NAME",
+        "affiliation": {
+          "@type": "Organization",
+          "name": "INSTITUTION_NAME"
+        }
+      }
+    ],
+    "datePublished": "2024-01-01",
+    "publisher": {
+      "@type": "Organization",
+      "name": "CONFERENCE_OR_JOURNAL_NAME"
+    },
+    "url": "https://YOUR_DOMAIN.com/YOUR_PROJECT_PAGE",
+    "image": "https://YOUR_DOMAIN.com/static/images/social_preview.png",
+    "keywords": ["KEYWORD1", "KEYWORD2", "KEYWORD3", "machine learning", "computer vision"],
+    "abstract": "FULL_ABSTRACT_TEXT_HERE",
+    "citation": "BIBTEX_CITATION_HERE",
+    "isAccessibleForFree": true,
+    "license": "https://creativecommons.org/licenses/by/4.0/",
+    "mainEntity": {
+      "@type": "WebPage",
+      "@id": "https://YOUR_DOMAIN.com/YOUR_PROJECT_PAGE"
+    },
+    "about": [
+      {
+        "@type": "Thing",
+        "name": "RESEARCH_AREA_1"
+      },
+      {
+        "@type": "Thing", 
+        "name": "RESEARCH_AREA_2"
+      }
+    ]
+  }
+  </script>
+  
+  <!-- Website/Organization Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "INSTITUTION_OR_LAB_NAME",
+    "url": "https://YOUR_INSTITUTION_WEBSITE.com",
+    "logo": "https://YOUR_DOMAIN.com/static/images/favicon.ico",
+    "sameAs": [
+      "https://twitter.com/YOUR_TWITTER_HANDLE",
+      "https://github.com/YOUR_GITHUB_USERNAME"
+    ]
+  }
+  </script>
+</head>
+<body>
+
+
+  <!-- Scroll to Top Button -->
+  <button class="scroll-to-top" onclick="scrollToTop()" title="Scroll to top" aria-label="Scroll to top">
+    <i class="fas fa-chevron-up"></i>
+  </button>
+
+  
+
+  <main id="main-content">
+  <section class="hero">
+    <div class="hero-body">
+      <div class="container is-max-desktop">
+        <div class="columns is-centered">
+          <div class="column has-text-centered">
+            <!-- TODO: Replace with your paper title -->
+            <h1 class="title is-1 publication-title">Learning a Speed-adaptive Hip Exoskeleton Control Policy Via Sim-to-real Reinforcement Learning</h1>
+            <!-- Author and institution blocks temporarily hidden.
+            <div class="is-size-5 publication-authors">
+              <span class="author-block">
+                <a href="FIRST AUTHOR PERSONAL LINK" target="_blank">First Author</a><sup>*</sup>,
+              </span>
+              <span class="author-block">
+                <a href="SECOND AUTHOR PERSONAL LINK" target="_blank">Second Author</a><sup>*</sup>,
+              </span>
+              <span class="author-block">
+                <a href="THIRD AUTHOR PERSONAL LINK" target="_blank">Third Author</a>
+              </span>
+            </div>
+
+            <div class="is-size-5 publication-authors">
+              <span class="author-block">Institution Name<br>Conference name and year</span>
+              <span class="eql-cntrb"><small><br><sup>*</sup>Indicates Equal Contribution</small></span>
+            </div>
+            -->
+
+                  <!-- <div class="column has-text-centered">
+                    <div class="publication-links">
+                      <span class="link-block">
+                        <a href="https://arxiv.org/pdf/2609.28027.pdf" target="_blank"
+                        class="external-link button is-normal is-rounded is-dark">
+                        <span class="icon">
+                          <i class="fas fa-file-pdf"></i>
+                        </span>
+                        <span>Paper</span>
+                      </a>
+                    </span>
+
+                    
+                  </span> -->
+
+                  <!-- TODO: Replace with your GitHub repository URL -->
+                  <span class="link-block">
+                    <a href="https://github.com/YOUR REPO HERE" target="_blank"
+                    class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="fab fa-github"></i>
+                    </span>
+                    <span>Code</span>
+                  </a>
+                </span>
+
+                <!-- TODO: Update with your arXiv paper ID -->
+                <span class="link-block">
+                  <a href="https://arxiv.org/abs/2609.28027" target="_blank"
+                  class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                    <i class="ai ai-arxiv"></i>
+                  </span>
+                  <span>arXiv</span>
+                </a>
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+<section class="hero teaser">
+  <div class="container is-max-desktop">
+    <div class="hero-body">
+      
+      <!-- <video poster="" id="tree" autoplay controls muted loop height="100%" preload="metadata">
+   
+        <source src="static/videos/ICRA.mp4" type="video/mp4">
+      </video> -->
+      <video
+        id="tree"
+        autoplay
+        controls
+        muted
+        loop
+        playsinline
+        style="width: 100%; height: auto;"
+      >
+        <source src="static/videos/ICRA.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+      <h2 class="subtitle has-text-centered">
+        Learning speed-adaptive assistance timing in simulation and personalizing assistance magnitude on a physical hip exoskeleton.
+      </h2>
+    </div>
+  </div>
+</section>
+
+
+<!-- Paper abstract -->
+<section class="section hero is-light">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified">
+          <!-- TODO: Replace with your paper abstract -->
+          <p>
+            Providing personalized exoskeleton assistance across varying walking speeds remains challenging. Existing online optimization methods are sample-inefficient, requiring extensive human-in-the-loop (HIL) evaluations to optimize the entire assistive torque profile. Sim-to-real reinforcement learning (RL) offers a promising alternative but cannot directly account for individual user preferences. We propose a framework integrating sim-to-real RL with online preference learning for personalized exoskeleton assistance. Specifically, assistance timing is learned in simulation by training RL policies with human musculoskeletal models across varying walking speeds. The learned policies are then distilled and deployed on a physical hip exoskeleton using onboard sensory observations. Gaussian-process-based preference learning further personalizes the assistance magnitude through pairwise user comparisons. By decoupling assistance timing learning in simulation from magnitude optimization in real-world experiments, our framework substantially reduces the online optimization space. Human-subject experiments demonstrate efficient identification of personalized assistive torque profiles across varying walking speeds with fewer real-world evaluations.
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- End paper abstract -->
+
+
+<!-- Overview -->
+<section class="section research-section">
+  <div class="container is-max-desktop">
+    <h2 class="title is-3 has-text-centered">Overview</h2>
+
+<img src="static/images/overview.png"
+     alt="Overview of the proposed framework"
+     loading="lazy">
+      <div class="research-copy content has-text-justified">
+
+        <p>
+          Our framework decouples the learning of speed-adaptive assistance timing from subject-specific assistance magnitude, combining simulation-based reinforcement learning with real-world preference optimization.
+        </p>
+
+        <p>
+          <strong>Human Policy Learning:</strong>
+          A context-conditioned human control policy is learned through fixed-speed motion imitation followed by variable-speed motion adaptation. Explicit reference-motion tracking is removed during the second phase, enabling the policy to generate locomotion across continuously varying walking speeds rather than simply reproducing predefined gait trajectories.
+        </p>
+
+        <p>
+          <strong>Exoskeleton Teacher Learning:</strong>
+          Exoskeleton teacher policies are trained through interaction with the learned human musculoskeletal model. Assistance timing is first shaped toward the desired mechanical-power direction and is subsequently refined through <strong>human–exoskeleton co-adaptation</strong>, allowing the assistance policy to adapt across steady walking, acceleration, and deceleration.
+        </p>
+
+        <p>
+          <strong>Policy Distillation:</strong>
+          The fully observed teacher policies are distilled into a TCN-based student policy that relies only on onboard sensory observations. This bridges the gap between fully observable simulation and the <strong>partially observed state available on the physical exoskeleton</strong>, enabling real-time deployment using wearable sensing.
+        </p>
+
+        <p>
+          <strong>Online Personalization:</strong>
+          After deployment, the assistance timing learned in simulation is preserved, while only the extension and flexion magnitudes are personalized through pairwise user preferences. This formulation reduces online adaptation to a <strong>low-dimensional preference-optimization problem</strong>, avoiding re-optimization of the complete assistive torque profile.
+        </p>
+
+      </div>
+  </div>
+</section>
+<!-- End Overview -->
+
+<!-- Simulation Validation -->
+<section class="section research-section has-background-light">
+  <div class="container is-max-desktop">
+    <h2 class="title is-3">Simulation Validation</h2>
+
+    <!-- <div class="video-block">
+      <video controls muted loop playsinline preload="metadata" aria-label="Variable-speed simulation">
+        <source src="static/videos/variable_speed.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+      <p class="figure-caption">Variable-speed locomotion and assistance behavior learned in simulation.</p>
+    </div> -->
+
+    <!-- Simulation image carousel -->
+    <div id="simulation-carousel" class="carousel results-carousel validation-carousel">
+      <div class="item">
+        <img src="static/images/speed.png" alt="Speed-adaptive human locomotion results" loading="lazy">
+        <p class="figure-caption">
+          Speed-adaptive behavior of the learned human motion policy across walking speeds from 0.5 to 1.7 m/s.
+        </p>
+      </div>
+
+      
+
+      <div class="item">
+        <img src="static/images/fig3a.png" alt="Commanded assistive torque during variable-speed walking" loading="lazy">
+        <p class="figure-caption">
+          Commanded assistive torque over the speed-transition sequence.
+        </p>
+      </div>
+
+      <div class="item">
+        <img src="static/images/fig3b.png" alt="Positive mechanical power during variable-speed walking" loading="lazy">
+        <p class="figure-caption">
+          Positive mechanical power and gait-level mean positive power during variable-speed walking.
+        </p>
+      </div>
+      <div class="item">
+        <img class="compact-result" src="static/images/activation_sim.png" alt="Simulation muscle activation comparison" loading="lazy">
+        <p class="figure-caption">
+          Comparison of RMS muscle activation across assistance methods at 0.9, 1.25, and 1.6 m/s.
+        </p>
+      </div>
+    </div>
+    <!-- End simulation image carousel -->
+
+    <div class="research-copy content">
+      <p>
+        <strong>Performance of Learned Human Control Policy:</strong>
+        The hip, knee, and ankle joint kinematics in the sagittal plane were evaluated across walking speeds ranging from 0.5 m/s to 1.7 m/s. The learned human control policy reproduces speed-adaptive locomotion over the entire evaluated speed range, despite being trained with reference motion only at 1.25 m/s. At the reference speed, the pooled RMSEs across the hip, knee, and ankle were 17.06&deg; for joint angles and 211.93&deg;/s for angular velocities. These deviations should not be interpreted solely as tracking errors, since the RL objective jointly considers motion imitation, walking-speed regulation, muscle effort, and physical constraints, while explicit reference tracking is removed during variable-speed adaptation. Joint-level agreement may also vary due to the joint-specific tracking weights used during the initial imitation stage.
+      </p>
+      <p>
+        <strong>Performance of Learned Assistance Profile:</strong>
+        MLP-PPO and LSTM-PPO policies were trained at a fixed walking speed of 1.25 m/s following the authors' implementation. During variable-speed walking, our method adapts torque magnitude with walking speed and yields higher positive mechanical power with torque amplitudes comparable to DOFC and the spline controller, suggesting improved assistance timing. For two representative muscles (<strong>RF: Rectus Femoris; BF: Biceps Femoris</strong>), the results show that our method consistently reduces RF activation across the evaluated walking speeds.
+      </p>
+    </div>
+  </div>
+</section>
+<!-- End Simulation Validation -->
+
+<!-- Experimental Validation -->
+<section class="section research-section">
+  <div class="container is-max-desktop">
+    <h2 class="title is-3">Experimental Validation</h2>
+
+    <div class="video-block">
+      <video controls muted loop playsinline preload="metadata" aria-label="Profile personalization experiment">
+        <source src="static/videos/profile_personalization.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+      <p class="figure-caption">Preference-based personalization of assistance magnitude on the physical hip exoskeleton.</p>
+    </div>
+
+    <!-- Experimental image carousel -->
+    <div id="experimental-carousel" class="carousel results-carousel validation-carousel">
+      <div class="item">
+        <img src="static/images/table_power.png" alt="Experimental mechanical performance across subjects" loading="lazy">
+      </div>
+
+      <div class="item">
+        <img src="static/images/emg.png" alt="Experimental muscle activation results" loading="lazy">
+        <p class="figure-caption">
+          Comparison of muscle activation across assistance methods at three walking speeds.
+        </p>
+      </div>
+
+      <div class="item">
+        <img class="compact-result" src="static/images/free_walk.png" alt="Free-walking resistive-assistance results" loading="lazy">
+        <p class="figure-caption">
+          Negative mechanical power and resistance ratio during free walking.
+        </p>
+      </div>
+    </div>
+    <!-- End experimental image carousel -->
+
+    <div class="research-copy content">
+      <p>
+        <strong>Treadmill Walking:</strong>
+        The performance of each method was evaluated during treadmill walking at 0.9 m/s, 1.25 m/s, and 1.6 m/s. The results show that our method achieves higher positive mechanical power than DOFC. Furthermore, incorporating online personalization further increases positive mechanical power by adapting the assistance magnitude to individual preferences. Muscle activation of RF and BF was also measured and analyzed. Several participants exhibited changes in BF activation that differed from those observed in simulation, suggesting that increased positive mechanical power does not necessarily translate into reduced muscle activation.
+      </p>
+      <p>
+        <strong>Free Walking:</strong>
+        Four participants were instructed to walk freely while continuously varying their walking speed at their own pace. For DOFC, the same parameters as those used in simulation were applied to all participants, whereas the individually preferred assistive torque profile was applied for our method. Our method reduced negative mechanical power by 55% (p = 0.030) and the resistance ratio by 27%, despite only a 9% reduction in RMS torque. These disproportionate reductions indicate that the improvement is not merely due to weaker assistance, but to more favorable temporal coordination of assistive torque with human motion.
+      </p>
+    </div>
+  </div>
+</section>
+<!-- End Experimental Validation -->
+
+
+<!--BibTex citation -->
+  <section class="section" id="BibTeX">
+    <div class="container is-max-desktop content">
+      <div class="bibtex-header">
+        <h2 class="title">BibTeX</h2>
+        <button class="copy-bibtex-btn" onclick="copyBibTeX()" title="Copy BibTeX to clipboard">
+          <i class="fas fa-copy"></i>
+          <span class="copy-text">Copy</span>
+        </button>
+      </div>
+      <pre id="bibtex-code"><code>@misc{li2026learningspeedadaptivehipexoskeleton,
+        title={Learning a Speed-adaptive Hip Exoskeleton Control Policy Via Sim-to-real Reinforcement Learning},
+        author={Bin Li and Zhimin Hou and Jiacheng Hou and Zenian Liang and Tong Wu and Teng Ma and Chenglong Fu},
+        year={2026},
+        eprint={2609.28027},
+        archivePrefix={arXiv},
+        primaryClass={cs.RO},
+        url={https://arxiv.org/abs/2609.28027},
+      }</code></pre>
+    </div>
+</section>
+<!--End BibTex citation -->
+
+
+  <footer class="footer">
+  <div class="container">
+    <div class="columns is-centered">
+      <div class="column is-8 has-text-centered">
+        <div class="content is-size-7">
+          <p>
+            Website template adapted from the
+            <a href="https://github.com/eliahuhorwitz/Academic-project-page-template" target="_blank">Academic Project Page Template</a>
+            and modified for this project. Template attribution retained under
+            <a rel="license" href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank">CC BY-SA 4.0</a>.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- Statcounter tracking code -->
+  
+<!-- You can add a tracker to track page visits by creating an account at statcounter.com -->
+
+    <!-- End of Statcounter Code -->
+
+  </body>
+  </html>

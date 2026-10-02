@@ -1,7 +1,7 @@
 # Learning a Speed-adaptive Hip Exoskeleton Control Policy Via Sim-to-real Reinforcement Learning
 
-**arXiv:** https://arxiv.org/abs/2609.28027
-**Project Page:** https://weed666.github.io/variable-speed/
+🌐 **[Project Page](https://weed666.github.io/variable-speed/)** &nbsp; | &nbsp; 📄 **[arXiv](https://arxiv.org/abs/2609.28027)**
+
 ## Overview
 
 <p align="center">
